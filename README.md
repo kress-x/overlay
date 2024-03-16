@@ -60,3 +60,7 @@ CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
 SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 For more information, please refer to &lt;<http://unlicense.org/>&gt;
+
+---
+
+Please be aware that some assets used in this overlay may be copyrighted and are not owned by the creator of this project.
