@@ -1,0 +1,250 @@
+/* GLOBALS */
+
+:root {
+  --width: 1920px;
+  --height: 1080px;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+
+  color: white;
+  background-color: black;
+}
+
+.flex {
+  display: flex;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.gap_8px {
+  gap: 8px;
+}
+
+.gap_2px {
+  gap: 2px;
+}
+
+.justify-content_center {
+  justify-content: center;
+}
+
+.align-items_center {
+  align-items: center;
+}
+
+.text-align_center {
+  text-align: center;
+}
+
+.size_16px {
+  width: 16px;
+  height: 16px;
+}
+
+.padding_8px {
+  padding: 8px;
+}
+
+.padding_16px {
+  padding: 16px;
+}
+
+.margin-top_neg4px {
+  margin-top: -4px !important;
+}
+
+h1.title {
+  position: absolute;
+  top: calc(var(--height) / 2);
+  transform: translateY(-50%);
+
+  width: var(--width);
+
+  font-size: 96px;
+  text-align: center;
+
+  margin: 0;
+  padding: 16px 0px 16px 0px;
+
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+h1.small {
+  font-size: 24px;
+  margin: 0px;
+  padding: 0px;
+}
+
+h1.dark {
+  color: rgb(64, 64, 64);
+}
+
+/* GENERIC */
+
+#root {
+  width: var(--width);
+  height: var(--height);
+}
+
+#background {
+  width: 0px;
+  height: 0px;
+}
+
+/* STARTING */
+
+#starting {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+
+  width: var(--width);
+  height: var(--height);
+}
+
+.heading {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-width: 228px;
+}
+
+/* INGAME */
+
+@keyframes slide {
+  0%{
+    background-position: 0% 0%;
+  }
+
+  100% {
+    background-position: 100% 200%;
+  }
+}
+
+#sidebar {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+
+  width: calc(336px + 8px + (32px * 2));
+  height: var(--height);
+
+  background-color: rgba(0, 0, 0, 0.75);
+
+  /* alternative: moving background image*/
+  /* 
+  background-origin: 0px 0px;
+  background-image:
+    linear-gradient(rgba(0,0,0,.90), rgba(0,0,0,.90)),
+    url(background.png);
+
+  animation: slide 10s linear infinite;
+  */
+
+  box-shadow: inset -48px 0px 24px -32px rgba(0, 0, 0, 1);
+}
+
+#achievements {
+  position: absolute;
+  left: 32px;
+  top: 32px;
+
+  width: 336px;
+  height: 320px;
+
+  background-color: rgba(0, 0, 0, 0.3333);
+  backdrop-filter: blur(8px);
+
+  border: 2px solid white;
+  border-radius: 16px;
+}
+
+#cam {
+  position: absolute;
+  left: 32px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 336px;
+  height: 240px;
+
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(static.gif);
+
+  border: 2px solid white;
+}
+
+#chat {
+  position: absolute;
+  left: 32px;
+  bottom: 32px;
+
+  width: 336px;
+  height: 320px;
+
+  background-color: rgba(0, 0, 0, 0.3333);
+  backdrop-filter: blur(8px);
+
+  border: 2px solid white;
+  border-radius: 16px;
+}
+
+/* AWAY */
+
+#away {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+
+  width: var(--width);
+  height: var(--height);
+}
+
+/* ENDING */
+
+#ending {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+
+  width: var(--width);
+  height: var(--height);
+
+  border: 32px solid black;
+  backdrop-filter: blur(8px);
+}
+
+/* INDEX */
+
+#index {
+  margin: 32px auto;
+
+  width: 480px;
+
+  background-color: rgba(0, 0, 0, 0.3333);
+  backdrop-filter: blur(8px);
+
+  border: 2px solid white;
+  border-radius: 16px;
+}
+
+[data-card] {
+  cursor: pointer;
+}
+
+[data-card][data-checked] {
+  border: 2px solid white;
+}
