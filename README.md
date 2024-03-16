@@ -17,11 +17,7 @@ This repository contains my personal stream overlay for use with OBS or similar 
 ## Running
 
 1. **Install Deno**: Ensure you have [Deno](https://deno.land/) installed (tested with `deno 1.40.5`).
-2. **Configure Environment**: Copy the example `.env` file:
-
-    ```bash
-    cp .env.sample .env
-    ```
+2. **Configure Environment**: Copy the example `.env` file: `$ cp .env.sample .env`.
 
     Fill in your Retro Achievements information:
     
