@@ -1,0 +1,14 @@
+{
+  "imports": {
+    "std/": "https://deno.land/std@0.218.2/",
+    "retroachievements": "npm:@retroachievements/api@^1.5.1",
+    "rxjs": "npm:rxjs@^8.0.0-alpha.14",
+    "react": "https://esm.sh/react@18.2.0",
+    "react-dom-server": "https://esm.sh/react-dom@18.2.0/server"
+  },
+  "tasks": {
+    "run": "deno run --unstable-kv --watch -A src/main.ts",
+    "fmt": "deno fmt src public",
+    "make:sidebar": "ffmpeg -i public/background.mp4 -vf \"crop=408:1080:48:0\" public/sidebar.mp4"
+  }
+}
